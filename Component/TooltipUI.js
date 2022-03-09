@@ -46,7 +46,7 @@ class CardUI{
           )}
           placement="bottom"
           >
-          <Button><img src = {this.image}/></Button>
+          <img src = {this.image}/>
         </OverlayTrigger>
       </div>
     )

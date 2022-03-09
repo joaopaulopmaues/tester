@@ -1,18 +1,20 @@
 import React, { useState } from "react"
 import { useDropzone } from "react-dropzone"
 import "../style.css"
+import CardUI from "./CardUI"
 
-export function Board(){
+export function DropImage(){
   const [files, setFiles] = useState([]);
 
   const { getRootProps, getInputProps } = useDropzone({
     accept: "image/*",
     onDrop: (acceptedFiles) => {
       setFiles(
-        acceptedFiles.map((file) =>
+        acceptedFiles.map((file) =>{
           Object.assign(file, {
             preview: URL.createObjectURL(file),
           })
+        }
         )
       )
     },
@@ -25,6 +27,8 @@ export function Board(){
       </div>
     </div>
   ))
+
+
     return (
       <div className="Board">
         <div {...getRootProps()}>
