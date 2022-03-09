@@ -46,7 +46,7 @@ class CardUI{
           )}
           placement="bottom"
           >
-          <button><img src = {this.image}/></button>
+          <Button><img src = {this.image}/></Button>
         </OverlayTrigger>
       </div>
     )
@@ -54,27 +54,22 @@ class CardUI{
 
 }
 
-export function TooltipButton(){
-  const carta = new CardUI("https://i.pinimg.com/564x/5c/47/1b/5c471b5d08e9e5a66a2a622185712ca2.jpg","qualquer coisa")
+export function TooltipButton(image, description){
+
   return(
-  <div>
-    {carta.TooltipButton()}
-    <img src = "https://i.pinimg.com/564x/5c/47/1b/5c471b5d08e9e5a66a2a622185712ca2.jpg" alt="display image" />
-</div>)
-  /*(
     <div>
       <h4>React-Bootstrap Tooltip Component</h4>
       <OverlayTrigger
         delay={{ hide: 450, show: 300 }}
         overlay={(props) => (
           <Tooltip {...props}>
-            Hii, I am a simple tooltip information!!!
+            {description}
           </Tooltip>
         )}
         placement="bottom"
         >
-          <button variant="warning"><img src = "https://pin.it/4aix7GR"/></button>
+        <button><img src = {image}/></button>
       </OverlayTrigger>
-    </div>
-  )*/
+    </div>)
+  
 }
