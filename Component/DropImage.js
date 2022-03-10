@@ -36,7 +36,14 @@ export function DropImage(){
             ...getInputProps()
           } />
           <p>Drop files here</p>
+          <p>Drop files here</p>
+          <p>Drop files here</p>
+          <p>Drop files here</p>
+          <p>Drop files here</p>
+          <p>Drop files here</p>
+          <p>Drop files here</p>
         {images}
+        {URL.revokeObjectURL(images.preview)}
         </div>
       </div>
     )
