@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { useDropzone } from "react-dropzone"
 import "../style.css"
-import CardUI from "./CardUI"
+import {TooltipButton} from "./TooltipUI"
 
 export function DropImage(){
   const [files, setFiles] = useState([]);
@@ -10,22 +10,22 @@ export function DropImage(){
     accept: "image/*",
     onDrop: (acceptedFiles) => {
       setFiles(
-        acceptedFiles.map((file) =>{
+        acceptedFiles.map((file) =>
           Object.assign(file, {
             preview: URL.createObjectURL(file),
           })
-        }
         )
       )
     },
   })
 
   const images = files.map((file) => (
-    <div key={file.name}>
+    TooltipButton(file.preview,"bla")
+    /*<div key={file.name}>
       <div>
         <img src={file.preview} style={{ width: "200px" }} alt="preview" />
       </div>
-    </div>
+    </div>*/
   ))
 
 
@@ -36,8 +36,13 @@ export function DropImage(){
             ...getInputProps()
           } />
           <p>Drop files here</p>
+          <p>Drop files here</p>
+          <p>Drop files here</p>
+          <p>Drop files here</p>
+          <p>Drop files here</p>
+          <p>Drop files here</p>
+        {images}
         </div>
-        <div>{images}</div>
       </div>
     )
   }

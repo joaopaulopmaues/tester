@@ -55,7 +55,6 @@ class CardUI{
 }
 
 export function TooltipButton(image, description){
-
   return(
     <div>
       <h4>React-Bootstrap Tooltip Component</h4>
@@ -68,7 +67,7 @@ export function TooltipButton(image, description){
         )}
         placement="bottom"
         >
-        <button><img src = {image}/></button>
+        <div><img src = {image}/></div>
       </OverlayTrigger>
     </div>)
   
