@@ -7,8 +7,10 @@ export function DropImage(){
   const [files, setFiles] = useState([]);
 
   const { getRootProps, getInputProps } = useDropzone({
-    accept: "image/*",
+    accept: "text/*",
     onDrop: (acceptedFiles) => {
+      console.log(JSON.parse(acceptedFiles))
+      console.log(JSON.parse(acceptedFiles)["image"])
       setFiles(
         acceptedFiles.map((file) =>
           Object.assign(file, {
@@ -21,7 +23,7 @@ export function DropImage(){
 
   const images = files.map((file) => (
     <div key={file.name}>
-      {TooltipButton(file.preview,"bla")}
+      {TooltipButton(file.preview,file.name)}
     </div>
     /*<div key={file.name}>
       <div>

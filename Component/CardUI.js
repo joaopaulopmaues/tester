@@ -7,6 +7,12 @@ export class CardUI extends TooltipButton{
   image;
   description;
 
+  CardUI(id,image,description){
+    this.id=0
+    this.image=image
+    this.description=description
+  }
+
   TooltipButton(){
     TooltipButton(this.image, this.description)
   }
