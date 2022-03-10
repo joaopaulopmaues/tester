@@ -20,7 +20,9 @@ export function DropImage(){
   })
 
   const images = files.map((file) => (
-    TooltipButton(file.preview,"bla")
+    <div key={file.name}>
+      {TooltipButton(file.preview,"bla")}
+    </div>
     /*<div key={file.name}>
       <div>
         <img src={file.preview} style={{ width: "200px" }} alt="preview" />
@@ -43,7 +45,7 @@ export function DropImage(){
           <p>Drop files here</p>
           <p>Drop files here</p>
         {images}
-        {URL.revokeObjectURL(images.preview)}
+        
         </div>
       </div>
     )
