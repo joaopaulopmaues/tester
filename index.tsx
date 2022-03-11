@@ -4,6 +4,7 @@ import './style.css';
 import {DropImage} from './Component/DropImage';
 import Hello from './Hello';
 import {CardUI} from './Component/CardUI'
+import {getDatabase} from "./Component/getCard"
 
 interface AppProps { }
 interface AppState {
@@ -22,6 +23,7 @@ class App extends Component<AppProps, AppState> {
     return (
       <div>
         <DropImage/>
+        {getDatabase}
       </div>
     )
   }
