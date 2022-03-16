@@ -8,6 +8,7 @@
     "@types/react-dom": "16.9.14",
     "@varld/popover": "0.1.0",
     "bootstrap": "5.1.3",
+    "http://www.peter-eigenschink.at/projects/steganographyjs/": "*",
     "null": "2.0.0",
     "react": "17.0.2",
     "react-bootstrap": "2.2.0",

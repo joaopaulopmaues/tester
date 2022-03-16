@@ -5,6 +5,7 @@ import {DropImage} from './Component/DropImage';
 import Hello from './Hello';
 import {CardUI} from './Component/CardUI'
 import {getDatabase} from "./Component/getCard"
+import {encode, decode} from "http://www.peter-eigenschink.at/projects/steganographyjs/"
 
 interface AppProps { }
 interface AppState {
