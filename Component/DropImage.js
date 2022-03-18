@@ -7,10 +7,8 @@ export function DropImage(){
   const [files, setFiles] = useState([]);
 
   const { getRootProps, getInputProps } = useDropzone({
-    accept: "text/*",
+    accept: "image/*",
     onDrop: (acceptedFiles) => {
-      console.log(JSON.parse(acceptedFiles))
-      console.log(JSON.parse(acceptedFiles)["image"])
       setFiles(
         acceptedFiles.map((file) =>
           Object.assign(file, {
