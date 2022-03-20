@@ -21,7 +21,7 @@ const loadSingleCardData = async() =>{
 
 useEffect(() => {
   loadSeatMap()
-},[]);*/
+},[]);
 
 require("dotenv").config()
 
@@ -37,4 +37,4 @@ const getDatabase = async () => {
   console.log(response);
 };
 
-export default getDatabase();
+export default getDatabase();*/

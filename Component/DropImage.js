@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import { useDropzone } from "react-dropzone"
 import "../style.css"
 import {TooltipButton} from "./TooltipUI"
+import {decmsg} from "./runpy"
 
 export function DropImage(){
   const [files, setFiles] = useState([]);
@@ -21,7 +22,7 @@ export function DropImage(){
 
   const images = files.map((file) => (
     <div key={file.name}>
-      {TooltipButton(file.preview,file.name)}
+      {TooltipButton(file.preview,decmsg(file.preview))}
     </div>
     /*<div key={file.name}>
       <div>
